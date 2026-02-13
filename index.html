@@ -1,0 +1,378 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #ffd1dc, #ffb6c1, #ffc0cb);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    h1 {
+        color: #d63384;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        z-index: 10;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-container {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        z-index: 20;
+    }
+
+    button {
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        position: absolute;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    #yesBtn {
+        background-color: #ff4d6d;
+        color: white;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+
+    #yesBtn:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    #noBtn {
+        background-color: white;
+        color: #d63384;
+        left: 60%;
+        transform: translateX(-50%);
+    }
+
+    .success-img {
+        width: 250px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .confetti {
+        position: fixed;
+        top: -50px;
+        user-select: none;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        10% { opacity: 1; }
+        100% {
+            transform: translateY(110vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1 id="q">Will you accept my proposal? ❤️</h1>
+
+<div class="btn-container">
+    <button id="yesBtn" onclick="yes()">Yes</button>
+    <button id="noBtn" onmouseover="move()" onclick="move()">No</button>
+</div>
+
+<script>
+
+const msgs = [
+    "Are you sure? 🥺",
+    "Think again! 🧐",
+    "Try again! 😂",
+    "No chance! 😉",
+    "Please accept! 🙏",
+    "Pudikkalaiyaa? 💔"
+];
+
+function move() {
+    const b = document.getElementById('noBtn');
+    const x = Math.random() * (window.innerWidth - b.offsetWidth - 20);
+    const y = Math.random() * (window.innerHeight - b.offsetHeight - 20);
+
+    b.style.position = "fixed";
+    b.style.left = x + 'px';
+    b.style.top = y + 'px';
+
+    document.getElementById('q').innerText =
+        msgs[Math.floor(Math.random() * msgs.length)];
+}
+
+function createShower() {
+    for (let i = 0; i < 8; i++) {
+        const heart = document.createElement("div");
+        heart.className = "confetti";
+        heart.innerHTML = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+        heart.style.animation = `fall ${Math.random() * 3 + 3}s linear forwards`;
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 5000);
+    }
+}
+
+function yes() {
+    document.body.innerHTML = `
+        <img src="sanjay.png" class="success-img">
+
+        <h1 style="animation: fadeIn 1.5s ease-in-out;">
+            I knew it… ❤️
+        </h1>
+
+        <h2 style="
+            color:#d63384;
+            margin-top:10px;
+            animation: fadeIn 2s ease-in-out;
+        ">
+            Love you more, Azhagi.
+        </h2>
+
+        <p style="
+            font-size:1.4rem;
+            color:#c2185b;
+            margin-top:10px;
+            animation: fadeIn 2.5s ease-in-out;
+        ">
+            You are my happiness — today and always ✨
+        </p>
+    `;
+
+    setInterval(createShower, 600);
+    createShower();
+}
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #ffd1dc, #ffb6c1, #ffc0cb);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    h1 {
+        color: #d63384;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn-container {
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
+    button {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        position: absolute;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    #yesBtn {
+        background-color: #ff4d6d;
+        color: white;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+
+    #yesBtn:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    #noBtn {
+        background-color: white;
+        color: #d63384;
+        left: 60%;
+        transform: translateX(-50%);
+    }
+
+    .love-container {
+        max-width: 800px;
+        padding: 30px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .love-text {
+        font-size: 1.3rem;
+        color: #c2185b;
+        line-height: 2;
+    }
+
+    .success-img {
+        width: 250px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .confetti {
+        position: fixed;
+        top: -50px;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<h1 id="q">Will you accept my proposal? ❤️</h1>
+
+<div class="btn-container">
+    <button id="yesBtn" onclick="yes()">Yes</button>
+    <button id="noBtn" onmouseover="move()" onclick="move()">No</button>
+</div>
+
+<script>
+
+const msgs = [
+    "Are you sure? 🥺",
+    "Think again! 🧐",
+    "Try again! 😂",
+    "No chance! 😉",
+    "Please accept! 🙏",
+    "Pudikkalaiyaa? 💔"
+];
+
+function move() {
+    const b = document.getElementById('noBtn');
+    const x = Math.random() * (window.innerWidth - b.offsetWidth - 20);
+    const y = Math.random() * (window.innerHeight - b.offsetHeight - 20);
+
+    b.style.position = "fixed";
+    b.style.left = x + 'px';
+    b.style.top = y + 'px';
+
+    document.getElementById('q').innerText =
+        msgs[Math.floor(Math.random() * msgs.length)];
+}
+
+function createShower() {
+    for (let i = 0; i < 8; i++) {
+        const heart = document.createElement("div");
+        heart.className = "confetti";
+        heart.innerHTML = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+        heart.style.animation = `fall ${Math.random() * 3 + 3}s linear forwards`;
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 5000);
+    }
+}
+
+function yes() {
+    document.body.innerHTML = `
+        <div class="love-container">
+
+            <img src="sanjay.png" class="success-img">
+
+            <h1>💖 என் இதயத்தின் வார்த்தைகள் 💖</h1>
+
+            <div class="love-text">
+                உன்னை காண என் கண்கள் ஏங்குதடா.... 👀✨ <br>
+                உன்னை காணாத போது விழிகள் கலங்குதடா...... 💧🥺 <br>
+                என் அருகில் நீ அமரும் நேரம் ஏதோ செய்கிறது என் இதயத்தின் ஓரம்...... 💓💫 <br>
+                உன் காதலை என் காதில் கூறவேண்டும்.... 👂🌹 <br>
+                உன் விழியில் என் பிம்பத்தை காண வேண்டும்.... 👁️💖 <br>
+                நூறு ஜென்மம் வேண்டாம்... மூன்று நொடி போதும்! ⏳ <br>
+                உன்னோடு வாழ்ந்து விட்டு சாகிறேன்...... 👩‍❤️‍👨🕊️ <br>
+                உன் நினைவுகளை நினைத்து உன் கரம் பிடிக்க ஏங்குகிறேன்..... 🤝💞 <br>
+                தாய்க்கு பின் சுகமான உறக்கத்தை உன் மடியில் காண வேண்டும்...... 😴🤱 <br>
+                நாட்கள் கடக்கிறது ... 🗓️ <br>
+                காலமும் கடக்கிறது.... ⏳💨 <br><br>
+                <strong>அன்பே... உந்தன் பதிலுக்காக பொறுமையாக காத்திருக்கிறேன்....... 💌🙏✨</strong>
+            </div>
+
+            <h2 style="margin-top:25px; color:#ff4d6d;">
+                Love you pattu 🎀🧡
+            </h2>
+
+        </div>
+    `;
+
+    setInterval(createShower, 600);
+    createShower();
+}
+
+</script>
+
+</body>
+</html>
